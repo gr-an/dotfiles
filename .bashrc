@@ -29,7 +29,7 @@ HISTIGNORE="history:ls:pwd:" # Ignoring ls pwd and history commands
 #
 # Running beautifull prompt on terminal opening 
 figlet -s Grigoryan | lolcat
-echo -e "This shit is going real! \n" | lolcat
+echo -e " SHITS ABOUT TO GET REAL! \n" | lolcat
 
 # Function to get the current timestamp in seconds and nanoseconds
 timer_now() {
@@ -106,4 +106,6 @@ trap 'timer_start' DEBUG
 # Get generated promet from difine_prompt function 
 PROMPT_COMMAND='define_prompt'
 
+# Runnign aliases 
+source ./.aliases
 

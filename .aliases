@@ -1,0 +1,72 @@
+#*******************************************************************
+# Copyright         : 2023 Andranik Grigoryan
+# File Name         : .aliases
+# Description       : alias configuration for bash  
+#                    
+# Revision History  : v1
+# ------------------------------------------------------------------
+# 07/11/2014	Andranik Grigoryan	main aliases added 
+#
+#******************************************************************/
+
+
+# Main aliases for tipos 
+alias claer='clear'
+alias cls='clear'
+alias gerp='grep'
+
+# Aliases for l
+alias l='exa -l'
+alias ll='exa -la'
+alias l.='exa -d .* '
+
+# Files, folder and resources 
+alias ..='cd ..'  
+alias ...='cd ../..'
+alias mkdir='mkdir -pv'
+
+# Dir jumpings 
+alias 1d='cd ..'
+alias 2d='cd ../..'
+alias 3d="cd ..;cd ..;cd .."
+alias 4d="cd ..;cd ..;cd ..;cd .."  
+alias 5d="cd ..;cd ..;cd ..;cd ..;cd .."
+
+# Archives 
+alias untar='tar -zxvf $1' 
+alias tar='tar -czvf $1'
+
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Colorized diff 
+alias diff='colordiff'
+
+# Editor
+alias edit='nvim'
+
+# reboot / halt / poweroff
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+
+# Control output of networking tool called ping
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+alias ports='netstat -tulanp'
+
+# Management 
+alias update='sudo apt update && sudo apt upgrade'
+
+# Get system memory, cpu usage, and gpu memory info quickly
+alias meminfo='free -m -l -t'
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+alias cpuinfo='lscpu'
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
