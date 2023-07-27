@@ -28,7 +28,7 @@ HISTIGNORE="history:ls:pwd:" # Ignoring ls pwd and history commands
 #================ Bash prompt configuration =====================
 #
 # Running beautifull prompt on terminal opening 
-figlet -s Grigoryan | lolcat
+figlet -s test | lolcat
 echo -e " SHITS ABOUT TO GET REAL! \n" | lolcat
 
 # Function to get the current timestamp in seconds and nanoseconds
