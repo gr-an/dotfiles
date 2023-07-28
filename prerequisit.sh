@@ -60,3 +60,20 @@ else
   echo -e "${WHITE}[colordiff] ${RED}Eroor while installing package"
 fi
 
+# Installing python3-venv for if lsp-python server needed
+sudo apt install -y python3-venv &> /dev/null
+if [ $? -eq 0 ]; then 
+  echo -e "${WHITE}[python3-venv] ${GREEN}Installed successfully"
+else
+  echo -e "${WHITE}[python3-venv] ${RED}Eroor while installing package"
+fi
+
+# Installing ripgrep
+sudo apt install -y ripgrep &> /dev/null
+if [ $? -eq 0 ]; then 
+  echo -e "${WHITE}[ripgrep] ${GREEN}Installed successfully"
+else
+  echo -e "${WHITE}[ripgrep] ${RED}Eroor while installing package"
+fi
+
+

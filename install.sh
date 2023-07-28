@@ -20,11 +20,15 @@ echo "Enter your name: "
 read name 
 
 # Backing up current configs 
-cp ${HOME}/.bashrc ${HOME}/.bashrc.back 
+cp ${HOME}/.bashrc ${HOME}/.bashrc.back
 
 # Copy new config to home whit changing prompt name 
 sed -i "s/username/${name}/g" .bashrc 
 cp .bashrc ${HOME}/.bashrc 
+
+# Configuring neovim 
+cp -r neovim ${HOME}/.config/nvim
+echo "Neovim configuration installed! "
 
 
 echo "Done: Please restart your termianl"
