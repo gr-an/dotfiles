@@ -27,5 +27,6 @@ sed -i "s/username/${name}/g" .bashrc
 cp .bashrc ${HOME}/.bashrc 
 
 # Configuring neovim 
-source ./nvim/dev
+cp ./nvim ${HOME}/.config/nvim -r
+
 echo "Done: Please restart your termianl"
