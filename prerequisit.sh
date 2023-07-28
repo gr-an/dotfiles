@@ -76,4 +76,20 @@ else
   echo -e "${WHITE}[ripgrep] ${RED}Eroor while installing package"
 fi
 
+# Installing neovim
+sudo apt install -y neovim &> /dev/null
+if [ $? -eq 0 ]; then 
+  echo -e "${WHITE}[neovim] ${GREEN}Installed successfully"
+else
+  echo -e "${WHITE}[neovim] ${RED}Eroor while installing package"
+fi
+
+# Installing neovim package manager Packer.nvim 
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+if [ $? -eq 0 ]; then 
+  echo -e "${WHITE}[packer.nvim] ${GREEN}Installed successfully"
+else
+  echo -e "${WHITE}[packer.nvim] ${RED}Eroor while installing package"
+fi
 
