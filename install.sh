@@ -27,7 +27,7 @@ sed -i "s/username/${name}/g" .bashrc
 cp .bashrc ${HOME}/.bashrc 
 
 # Configuring neovim 
-cp -r neovim ${HOME}/.config/nvim
+cp -r nvim ${HOME}/.config/nvim
 echo "Neovim configuration installed! "
 
 
