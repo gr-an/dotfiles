@@ -25,6 +25,16 @@ else
   echo -e "${WHITE}[figlet] => ${RED}Error while installing package"
 fi
 
+# Installing lolcat for prompt 
+sudo apt install lolcat -y &> /dev/null 
+
+if [ $? -eq 0 ]; then
+  echo -e "${WHITE}[lolcat] => ${GREEN}Installed successfully! "
+else 
+  echo -e "${WHITE}[lolcat] => ${REDC}Error while installing package"
+fi 
+
+
 # Installing git completion script 
 sudo apt install git-core bash-completion &> /dev/null
 
